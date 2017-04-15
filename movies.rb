@@ -19,7 +19,16 @@ when "add"
     puts "That movie already exists! Its rating is #{movies[title.to_sym]}."
   end
 when "update"
-  puts "Updated!"
+  puts "What is the title of the movie you want to update?"
+  title = gets.chomp
+  if movies[title.to_sym].nil?
+    puts "That movie isn't in the hash"
+  else
+    puts "What would you like to change #{title}'s rating to? (Type a number 0 to 4)"
+    rating = gets.chomp
+    movies[title.to_sym] = rating.to_i
+    puts "#{title} has been updated with a rating of #{rating}."
+  end
 when "display"
   puts "Movies!"
 when "delete"
