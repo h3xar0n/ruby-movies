@@ -30,7 +30,9 @@ when "update"
     puts "#{title} has been updated with a rating of #{rating}."
   end
 when "display"
-  puts "Movies!"
+  movies.each do |movie, rating|
+    puts "#{movie}: #{rating}"
+  end
 when "delete"
   puts "Deleted!"
 else
