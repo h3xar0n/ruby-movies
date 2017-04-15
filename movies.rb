@@ -1,6 +1,7 @@
 movies = {
-  'Empire Strikes Back' => '4'
+  Empire Strikes Back: 4
 }
+
 puts "What would you like to do, add, update, display, or delete?"
 choice = gets.chomp.downcase
 
