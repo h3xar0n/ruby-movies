@@ -34,7 +34,14 @@ when "display"
     puts "#{movie}: #{rating}"
   end
 when "delete"
-  puts "Deleted!"
+  puts "What is the title of the movie you want to delete?"
+  title = gets.chomp
+  if movies[title.to_sym].nil?
+    puts "That movie isn't in the hash"
+  else
+    movies.delete(title.to_sym)
+    puts "#{title} has been removed."
+  end
 else
-  puts "Error!"
+  puts "Error! You must type either 'add', 'update', 'display' or 'delete'"
 end
