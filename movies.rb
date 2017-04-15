@@ -1,5 +1,6 @@
 movies = {
-  Empire Strikes Back: 4
+  Empire_Strikes_Back: 4,
+  Tron: 3
 }
 
 puts "What would you like to do, add, update, display, or delete?"
