@@ -7,11 +7,14 @@ choice = gets.chomp
 case choice
 when "add"
   puts "What is the title of the movie you want to add?"
-  title = gets.chomp.to_sym
+  title = gets.chomp
   puts "On a scale of 1 to 4, how would you rate the movie?"
-  rating = gets.chomp.to_i
-  movies[title] = rating
-  puts movies[title]
+  rating = gets.chomp
+  if movies[title.to_sym].nil?
+      movies[title.to_sym] = rating.to_i
+  else 
+    puts title + " is already saved!"
+  end
 when "update"
   puts "Updated!"
 when "display"
